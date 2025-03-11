@@ -4251,6 +4251,7 @@ dependencies = [
  "bevy_ecs",
  "bevy_renet",
  "bincode",
+ "lazy_static",
  "log",
  "lz4",
  "rand",

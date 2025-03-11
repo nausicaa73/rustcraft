@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use lazy_static::lazy_static;
 
 use crate::HALF_BLOCK;
 
@@ -44,6 +45,33 @@ pub enum BlockId {
     Water,
 }
 
+lazy_static! {
+    static ref BlockBreakingCoeff: HashMap<BlockId, u8> = {
+        let mut map = HashMap::new();
+        map.insert(BlockId::Dirt, 5);
+        map.insert(BlockId::Debug, 10);
+        map.insert(BlockId::Grass, 6);
+        map.insert(BlockId::Stone, 20);
+        map.insert(BlockId::OakLog, 20);
+        map.insert(BlockId::OakPlanks, 20);
+        map.insert(BlockId::OakLeaves, 2);
+        map.insert(BlockId::Sand, 5);
+        map.insert(BlockId::Cactus, 4);
+        map.insert(BlockId::Ice, 5);
+        map.insert(BlockId::Glass, 3);
+        map.insert(BlockId::Bedrock, 100);
+        map.insert(BlockId::Dandelion, 0);
+        map.insert(BlockId::Poppy, 0);
+        map.insert(BlockId::TallGrass, 0);
+        map.insert(BlockId::Cobblestone, 2);
+        map.insert(BlockId::Snow, 9);
+        map.insert(BlockId::SpruceLeaves, 2);
+        map.insert(BlockId::SpruceLog, 20);
+        map.insert(BlockId::Water, 100);
+        map
+    };
+}
+
 #[derive(Debug, Copy, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum BlockDirection {
     Front,
@@ -59,6 +87,7 @@ pub struct BlockData {
     pub flipped: bool,
     pub direction: BlockDirection,
     pub breaking_progress: u8,
+    pub breaking_coeff: u8,
 }
 
 impl BlockData {
@@ -68,6 +97,7 @@ impl BlockData {
             flipped,
             direction,
             breaking_progress: 0,
+            breaking_coeff: *BlockBreakingCoeff.get(&id).unwrap(),
         }
     }
 }
