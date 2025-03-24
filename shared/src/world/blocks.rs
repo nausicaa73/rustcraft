@@ -99,7 +99,6 @@ impl BlockId {
 
     pub fn get_break_time(&self) -> u8 {
         match *self {
-            Self::Bedrock => 100,
             Self::Dirt => 5,
             Self::Debug => 10,
             Self::Grass => 6,
@@ -118,8 +117,7 @@ impl BlockId {
             Self::Snow => 9,
             Self::SpruceLeaves => 2,
             Self::SpruceLog => 20,
-            Self::Water => 100,
-            _ => 5,
+            _ => 100,
         }
     }
 
