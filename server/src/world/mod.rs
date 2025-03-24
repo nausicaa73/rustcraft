@@ -32,34 +32,36 @@ pub fn handle_block_interactions(
                 debug!("Block added at {:?}: {:?}", event.position, block);
             }
             None => {
-                for (id, nb) in world_map
+                // Handle block removal with proper option handling
+                if let Some(block) = world_map
                     .chunks
                     .get_block_by_coordinates(&event.position)
-                    .unwrap()
-                    .id
-                    .get_drops(1)
                 {
-                    world_map.item_stacks.push(ServerItemStack {
-                        id: Ulid::new().0,
-                        despawned: false,
-                        stack: ItemStack {
-                            item_id: id,
-                            item_type: id.get_default_type(),
-                            nb,
-                        },
-                        pos: Vec3::new(
-                            event.position.x as f32,
-                            event.position.y as f32,
-                            event.position.z as f32,
-                        ),
-                        timestamp: 0,
-                    });
-                }
+                    for (id, nb) in block.id.get_drops(1) {
+                        world_map.item_stacks.push(ServerItemStack {
+                            id: Ulid::new().0,
+                            despawned: false,
+                            stack: ItemStack {
+                                item_id: id,
+                                item_type: id.get_default_type(),
+                                nb,
+                            },
+                            pos: Vec3::new(
+                                event.position.x as f32,
+                                event.position.y as f32,
+                                event.position.z as f32,
+                            ),
+                            timestamp: 0,
+                        });
+                    }
 
-                world_map
-                    .chunks
-                    .remove_block_by_coordinates(&event.position);
-                info!("Block removed at {:?}", event.position);
+                    world_map
+                        .chunks
+                        .remove_block_by_coordinates(&event.position);
+                    info!("Block removed at {:?}", event.position);
+                } else {
+                    warn!("No block found at position {:?}", event.position);
+                }
             }
         }
     }
