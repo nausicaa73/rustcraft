@@ -157,22 +157,13 @@ impl ClientWorldMap {
         data.breaking_progress += 1;
 
         // info!("Block breaking progress: {}", data.breaking_progress);
-        if kind.breaking_coeff!=100{
-            if data.breaking_progress >= 6 * kind.breaking_coeff{
+        if kind.id.get_break_time() != 100 {
+            if data.breaking_progress >= 6 * kind.id.get_break_time() {
                 chunk_map.map.remove(&local_block_pos);
-                Some((kind, true))
-            } else if data.breaking_progress >= 4 * kind.breaking_coeff{
-                //changer la texture
-                Some((kind, false))
-            } else if data.breaking_progress >= 2 * kind.breaking_coeff{
-                //changer la texture
-                Some((kind, false))
-            } else {
-                return Some((kind, false));
+                return Some((kind, true));
             }
-            } else {
-                return Some((kind, false));
-            }
+        }
+        Some((kind, false))
     }
 }
 

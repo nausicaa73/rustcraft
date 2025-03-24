@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use lazy_static::lazy_static;
 
 use crate::HALF_BLOCK;
 
@@ -45,33 +44,6 @@ pub enum BlockId {
     Water,
 }
 
-lazy_static! {
-    static ref BlockBreakingCoeff: HashMap<BlockId, u8> = {
-        let mut map = HashMap::new();
-        map.insert(BlockId::Dirt, 5);
-        map.insert(BlockId::Debug, 10);
-        map.insert(BlockId::Grass, 6);
-        map.insert(BlockId::Stone, 20);
-        map.insert(BlockId::OakLog, 20);
-        map.insert(BlockId::OakPlanks, 20);
-        map.insert(BlockId::OakLeaves, 2);
-        map.insert(BlockId::Sand, 5);
-        map.insert(BlockId::Cactus, 4);
-        map.insert(BlockId::Ice, 5);
-        map.insert(BlockId::Glass, 3);
-        map.insert(BlockId::Bedrock, 100);
-        map.insert(BlockId::Dandelion, 0);
-        map.insert(BlockId::Poppy, 0);
-        map.insert(BlockId::TallGrass, 0);
-        map.insert(BlockId::Cobblestone, 2);
-        map.insert(BlockId::Snow, 9);
-        map.insert(BlockId::SpruceLeaves, 2);
-        map.insert(BlockId::SpruceLog, 20);
-        map.insert(BlockId::Water, 100);
-        map
-    };
-}
-
 #[derive(Debug, Copy, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum BlockDirection {
     Front,
@@ -87,7 +59,6 @@ pub struct BlockData {
     pub flipped: bool,
     pub direction: BlockDirection,
     pub breaking_progress: u8,
-    pub breaking_coeff: u8,
 }
 
 impl BlockData {
@@ -97,7 +68,6 @@ impl BlockData {
             flipped,
             direction,
             breaking_progress: 0,
-            breaking_coeff: *BlockBreakingCoeff.get(&id).unwrap(),
         }
     }
 }
@@ -127,10 +97,29 @@ impl BlockId {
         false
     }
 
-    pub fn get_break_time(&self) -> f32 {
+    pub fn get_break_time(&self) -> u8 {
         match *self {
-            Self::Bedrock => -1.,
-            _ => 5.,
+            Self::Bedrock => 100,
+            Self::Dirt => 5,
+            Self::Debug => 10,
+            Self::Grass => 6,
+            Self::Stone => 20,
+            Self::OakLog => 20,
+            Self::OakPlanks => 20,
+            Self::OakLeaves => 2,
+            Self::Sand => 5,
+            Self::Cactus => 4,
+            Self::Ice => 5,
+            Self::Glass => 3,
+            Self::Dandelion => 0,
+            Self::Poppy => 0,
+            Self::TallGrass => 0,
+            Self::Cobblestone => 2,
+            Self::Snow => 9,
+            Self::SpruceLeaves => 2,
+            Self::SpruceLog => 20,
+            Self::Water => 100,
+            _ => 5,
         }
     }
 
