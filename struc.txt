@@ -1,0 +1,318 @@
+
+[2m[0m[38;2;84;142;200mcrate[0m client
+[2m├── [0m[38;2;84;142;200mstruct[0m Args[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m├── [0m[38;2;84;142;200menum[0m GameState[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mstruct[0m KeyMap[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mstruct[0m LoadWorldEvent[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mstruct[0m MenuCamera[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mstruct[0m PlayerNameSupplied[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mstruct[0m TexturePath[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m camera[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m controller[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m camera_control_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m spawn[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│       ├── [0m[38;2;84;142;200mstruct[0m CameraController[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m spawn_camera[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m constants[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m├── [0m[38;2;84;142;200mmod[0m entities[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m stack[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       ├── [0m[38;2;84;142;200mstruct[0m StackMarker[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m stack_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m game[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mstruct[0m PreLoadingCompletion[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mfn[0m check_pre_loading_complete[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   ├── [0m[38;2;84;142;200mfn[0m clear_resources[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   └── [0m[38;2;84;142;200mfn[0m game_plugin[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m input[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m data[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200menum[0m GameAction[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m keyboard[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m get_action_keys[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m get_bindings[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m is_action_just_pressed[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m is_action_just_released[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m is_action_pressed[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m save_keybindings[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m mouse[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m handle_mouse_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mfn[0m main[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m├── [0m[38;2;84;142;200mmod[0m mob[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mstruct[0m MobMarker[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mstruct[0m MobRoot[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mstruct[0m TargetedMob[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mstruct[0m TargetedMobData[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m fox[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m Animations[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m FoxFeetTargets[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m OnStep[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m Particle[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m ParticleAssets[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m from_world[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m observe_on_step[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m setup_fox[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m setup_fox_once_loaded[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m simulate_particles[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m spawn_particle[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m update_targetted_mob_color[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m spawn[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m spawn_mobs_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m network[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m buffered_client[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m CurrentFrameInputs[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m reset[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mtrait[0m CurrentFrameInputsExt[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m PlayerTickInputsBuffer[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m SyncTime[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m advance[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m delta[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   └── [0m[38;2;84;142;200mtrait[0m SyncTimeExt[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m chat[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m CachedChatConversation[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m _update_cached_chat_state[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m cleanup[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m terminate_server_connection[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m extensions[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mtrait[0m SendGameMessageExtension[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m inputs[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m UnacknowledgedInputs[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m upload_player_inputs_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m save[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m send_save_request_to_server[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m setup[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m CurrentPlayerProfile[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m from_world[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m new[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m TargetServer[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200menum[0m TargetServerState[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m add_base_netcode[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m establish_authenticated_connection_to_server[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m hash_string_to_u64[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m init_server_connection[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m launch_local_server_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m network_failure_handler[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m poll_network_messages[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m world[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m update_world_from_network[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m player[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m controller[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m PlayerMaterialHandle[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m chunk_force_reload_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m first_and_third_person_view_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m player_movement_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m pre_input_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m toggle_chunk_debug_mode_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m interactions[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m bounce_ray[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m handle_block_interactions[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m labels[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m PlayerLabel[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m player_labels_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m update[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│       ├── [0m[38;2;84;142;200mstruct[0m CurrentPlayerMarker[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       ├── [0m[38;2;84;142;200menum[0m ViewMode[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       │   └── [0m[38;2;84;142;200mfn[0m toggle[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       ├── [0m[38;2;84;142;200mfn[0m spawn_players_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m update_players_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m├── [0m[38;2;84;142;200mmod[0m ui[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m assets[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_background_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_button_background_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_button_background_large_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_dark_button_background_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_dark_button_background_large_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m load_font[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m load_title_image[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m button[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200menum[0m MenuButtonAction[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200menum[0m MenuState[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m ScrollingList[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mstruct[0m SelectedOption[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mfn[0m button_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m hud[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m chat[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ChatDisplay[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ChatInput[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ChatRoot[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m MessageAnimator[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m render_chat[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m setup_chat[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m debug[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m DebugOptions[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m toggle_chunk_debug_mode[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m blocks[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m BlockDebugWireframeSettings[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m toggle_wireframe_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m chunks[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m ChunkGhost[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m chunk_ghost_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m create_repeated_wireframe_mesh[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m setup_chunk_ghost[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m coords[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m CoordsText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m coords_text_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m fps[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m FpsText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m fps_text_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m inspector[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m inspector_ui[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m loaded_stats[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m BlocksNumberText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m ChunksNumberText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m TimeText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m time_text_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m total_blocks_text_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m HudRoot[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m setup_hud[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m toggle_hud_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mmod[0m targeted_block[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │       ├── [0m[38;2;84;142;200mstruct[0m BlockText[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │       └── [0m[38;2;84;142;200mfn[0m block_text_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m hotbar[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m Hotbar[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m setup_hotbar[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m inventory[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m FloatingStack[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m InventoryCell[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m InventoryDialog[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m InventoryRoot[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200menum[0m UIMode[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m UiDialog[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m display[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m render_inventory_hotbar[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m update_inventory_cell[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m items[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m add_item_floating_stack[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m remove_item_floating_stack[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m set_ui_mode[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mmod[0m setup[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │       └── [0m[38;2;84;142;200mfn[0m setup_inventory[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mmod[0m reticle[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │       └── [0m[38;2;84;142;200mfn[0m spawn_reticle[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   ├── [0m[38;2;84;142;200mmod[0m menus[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m escape_button[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m home[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m home_setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m menu_action[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m menu_plugin[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m menu_setup[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   ├── [0m[38;2;84;142;200mfn[0m mouse_scroll[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m multi[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200menum[0m MultiplayerButtonAction[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ServerIpInput[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ServerItem[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ServerList[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m ServerNameInput[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m add_server_item[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m load_server_list[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m multiplayer_action[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m multiplayer_menu_setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m save_server_list[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m pause[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200menum[0m PauseButtonAction[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m PauseMenu[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m render_pause_menu[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m setup_pause_menu[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m server_connect_loading[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m CancelButtonMarker[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m LoadingTextMarker[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m setup_server_connect_loading_screen[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m update_server_connect_loading_screen[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m settings[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mmod[0m controls[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m ActionRecorder[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m ClearButton[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mstruct[0m EditControlButton[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m controls_menu_setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   ├── [0m[38;2;84;142;200mfn[0m controls_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   │   └── [0m[38;2;84;142;200mfn[0m update_input_component[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mmod[0m menu[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │       └── [0m[38;2;84;142;200mfn[0m settings_menu_setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   ├── [0m[38;2;84;142;200mmod[0m solo[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200menum[0m MultiplayerButtonAction[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m SelectedWorld[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m WorldItem[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m WorldList[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mstruct[0m WorldNameInput[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m add_world_item[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m delete_save_files[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m generate_new_world_name[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m list_worlds[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   ├── [0m[38;2;84;142;200mfn[0m solo_action[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   │   └── [0m[38;2;84;142;200mfn[0m solo_menu_setup[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │   └── [0m[38;2;84;142;200mmod[0m splash[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │       ├── [0m[38;2;84;142;200mstruct[0m SplashTimer[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │       ├── [0m[38;2;84;142;200mfn[0m countdown[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   │       ├── [0m[38;2;84;142;200mfn[0m splash_plugin[2m:[0m [38;2;129;193;105mpub[0m
+[2m│   │       └── [0m[38;2;84;142;200mfn[0m splash_setup[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m│   └── [0m[38;2;84;142;200mmod[0m style[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       ├── [0m[38;2;84;142;200mfn[0m background_image_style[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       ├── [0m[38;2;84;142;200mfn[0m big_button_style[2m:[0m [38;2;129;193;105mpub[0m
+[2m│       └── [0m[38;2;84;142;200mfn[0m text_font[2m:[0m [38;2;129;193;105mpub[0m
+[2m└── [0m[38;2;84;142;200mmod[0m world[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m    ├── [0m[38;2;84;142;200mstruct[0m FirstChunkReceived[2m:[0m [38;2;129;193;105mpub[0m
+[2m    ├── [0m[38;2;84;142;200mmod[0m celestial[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m CelestialRoot[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m MoonLight[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m SunLight[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mfn[0m setup_main_lighting[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   └── [0m[38;2;84;142;200mfn[0m update_celestial_bodies[2m:[0m [38;2;129;193;105mpub[0m
+[2m    ├── [0m[38;2;84;142;200mmod[0m data[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m ClientChunk[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m ClientWorldMap[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m check_collision_box[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m check_collision_point[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m get_block_by_coordinates[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m get_surrounding_chunks[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m remove_block_by_coordinates[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m set_block[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m try_to_break_block[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200menum[0m GlobalMaterial[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m QueuedEvents[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   └── [0m[38;2;84;142;200menum[0m WorldRenderRequestUpdateEvent[2m:[0m [38;2;129;193;105mpub[0m
+[2m    ├── [0m[38;2;84;142;200mmod[0m raycast[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200menum[0m FaceDirection[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m to_ivec3[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   ├── [0m[38;2;84;142;200mtrait[0m FaceDirectionExt[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mstruct[0m RaycastResponse[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mfn[0m determine_hit_face[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   ├── [0m[38;2;84;142;200mfn[0m first_person_raycast[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   ├── [0m[38;2;84;142;200mfn[0m raycast[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mfn[0m raycast_from_source_position_and_direction[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   └── [0m[38;2;84;142;200mfn[0m third_person_raycast[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    ├── [0m[38;2;84;142;200mmod[0m rendering[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mmod[0m materials[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m AtlasHandles[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m AtlasWrapper[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m MaterialResource[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m build_texture_atlas[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m create_all_atlases[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m setup_materials[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mmod[0m meshing[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m ChunkMeshResponse[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m MeshCreator[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m UvCoords[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   │   └── [0m[38;2;84;142;200mfn[0m new[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m build_mesh[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m generate_chunk_mesh[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m is_block_surrounded[2m:[0m [38;2;247;210;99mpub(crate)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m render_face[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m rotate_vertices[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m should_render_face[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   ├── [0m[38;2;84;142;200mmod[0m render[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m QueuedMeshes[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mfn[0m update_chunk[2m:[0m [38;2;219;77;89mpub(self)[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m world_render_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   ├── [0m[38;2;84;142;200mmod[0m render_distance[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   ├── [0m[38;2;84;142;200mstruct[0m RenderDistance[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   │   └── [0m[38;2;84;142;200mfn[0m render_distance_update_system[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │   └── [0m[38;2;84;142;200mmod[0m voxel[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │       ├── [0m[38;2;84;142;200mstruct[0m Face[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │       ├── [0m[38;2;84;142;200menum[0m FaceDirection[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │       └── [0m[38;2;84;142;200mstruct[0m VoxelShape[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │           ├── [0m[38;2;84;142;200mfn[0m create_from_block[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │           ├── [0m[38;2;84;142;200mfn[0m flora[2m:[0m [38;2;129;193;105mpub[0m
+[2m    │           └── [0m[38;2;84;142;200mfn[0m full_cube[2m:[0m [38;2;129;193;105mpub[0m
+[2m    └── [0m[38;2;84;142;200mmod[0m time[2m:[0m [38;2;129;193;105mpub[0m
+[2m        ├── [0m[38;2;84;142;200mstruct[0m ClientTime[2m:[0m [38;2;129;193;105mpub[0m
+[2m        └── [0m[38;2;84;142;200mfn[0m time_update_system[2m:[0m [38;2;129;193;105mpub[0m
